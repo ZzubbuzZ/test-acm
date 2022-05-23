@@ -18,11 +18,11 @@ kind: Namespace
 metadata:
   annotations:
     configmanagement.gke.io/cluster-name: defaultcluster
-    configmanagement.gke.io/source-path: config/namespaces/team-1/namespace.yaml
+    configmanagement.gke.io/source-path: config/namespaces/team-3/namespace.yaml
     configsync.gke.io/declared-fields: '{}'
     hnc.x-k8s.io/managed-by: configmanagement.gke.io
   labels:
     configsync.gke.io/declared-version: v1
     team-1.tree.hnc.x-k8s.io/depth: "0"
-  name: team-1
+  name: team-3
 # [END anthosconfig_hierarchical_format_compiled_namespace_team_1]
