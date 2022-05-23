@@ -2,7 +2,7 @@
 # Structure of a hierarchical root repository
 
 The directory demonstrates how to use a Config Sync hierarchical root repository to
-config a Kubernetes cluster shared by two different teams, `team-1` and
+config a Kubernetes cluster shared by two different teams, `team-3` and
 `team-2`. 
 - Each team has its own Kubernetes namespace, Kubernetes service account, resoure
 quotas, network policies, rolebindings.
@@ -37,7 +37,7 @@ The `system/` directory contains configs for the Config Sync Operator.
 │   └── crontab-crd.yaml
 ├── namespaces
 │   ├── limit-range.yaml
-│   ├── team-1
+│   ├── team-3
 │   │   ├── crontab.yaml
 │   │   ├── namespace.yaml
 │   │   ├── network-policy-default-deny-egress.yaml

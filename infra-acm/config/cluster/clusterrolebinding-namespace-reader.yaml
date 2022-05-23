@@ -23,7 +23,7 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: sa
-  namespace: team-1
+  namespace: team-3
 - kind: ServiceAccount
   name: sa
   namespace: team-2
