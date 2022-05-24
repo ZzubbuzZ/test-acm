@@ -40,7 +40,8 @@ metadata:
     secured: "team1"
     pouet: "tut"
 spec:
-  type: ClusterIP
+#  type: ClusterIP
+  type: LoadBalancer
   selector:
     app: my-test-app
   ports:
