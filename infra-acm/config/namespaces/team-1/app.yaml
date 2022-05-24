@@ -43,5 +43,5 @@ spec:
   selector:
     app: my-test-app
   ports:
-  - port: 80
+  - port: 8080
   type: ClusterIP
