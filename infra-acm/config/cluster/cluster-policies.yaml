@@ -11,5 +11,5 @@ spec:
         - Namespace
   parameters:
     labels: 
-    - key: secured
+      - key: secured
     message: All namespaces must have a "secured" label
