@@ -5,7 +5,11 @@ metadata:
 spec:
   match:
     kinds:
-      - apiGroups: [""]
-        kinds: ["Namespace"]
+      - apiGroups: 
+        - ""
+        kinds: 
+        - Namespace
   parameters:
-    labels: ["secured"]
+    labels: 
+    - key: secured
+    message: All namespaces must have a "secured" label
