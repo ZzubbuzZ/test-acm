@@ -40,11 +40,11 @@ metadata:
     secured: "team1"
     pouet: "tut"
 spec:
-  selector:
-    app: my-test-app
-  ports:
+  type: ClusterIP
+  selector:
+    app: my-test-app
+  ports:
   - name: my-service-http-port
     protocol: TCP
     port: 80
     targetPort: http-server
-  type: ClusterIP
