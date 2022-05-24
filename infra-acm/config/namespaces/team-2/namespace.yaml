@@ -16,4 +16,7 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: team-2
+  labels:
+    secured: "team2"
+    pouet: "tut"
 # [END anthosconfig_hierarchical_format_config_namespaces_team_2_namespace]
