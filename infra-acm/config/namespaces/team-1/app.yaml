@@ -36,14 +36,16 @@ kind: Service
 metadata:
   name: my-test-service
   annotations:
-    cloud.google.com/app-protocols: '{"my-http-port":"HTTP"}'
+    networking.gke.io/load-balancer-type: "Internal"
+    # cloud.google.com/app-protocols: '{"my-http-port":"HTTP"}'
   namespace: team-1
   labels:
     secured: "team1"
     pouet: "tut"
 spec:
 #  type: ClusterIP
-  type: NodePort
+#  type: NodePort
+  type: LoadBalancer
   selector:
     app: my-test-apa
   ports:
