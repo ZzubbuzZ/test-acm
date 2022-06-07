@@ -48,7 +48,7 @@ spec:
 #  type: NodePort
 #  type: LoadBalancer
   selector:
-    app: my-test-apa
+    app: my-test-app
   ports:
   - name: my-http-port
     protocol: TCP
