@@ -37,6 +37,7 @@ metadata:
   name: my-test-service
   annotations:
     networking.gke.io/load-balancer-type: "Internal"
+    configmanagement.gke.io/managed: disabled
     # cloud.google.com/app-protocols: '{"my-http-port":"HTTP"}'
   namespace: team-1
   labels:
