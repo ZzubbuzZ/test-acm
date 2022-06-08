@@ -67,7 +67,7 @@ spec:
   rules:
   - http:
       paths:
-      - path: /*
+      - path: /toto
         pathType: ImplementationSpecific
         backend:
           service:
