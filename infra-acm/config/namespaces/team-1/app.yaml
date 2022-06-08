@@ -35,9 +35,9 @@ apiVersion: v1
 kind: Service
 metadata:
   name: my-test-service
-  annotations:
-    networking.gke.io/load-balancer-type: "Internal"
-    configmanagement.gke.io/managed: disabled
+#  annotations:
+#    networking.gke.io/load-balancer-type: "Internal"
+#    configmanagement.gke.io/managed: disabled
     # cloud.google.com/app-protocols: '{"my-http-port":"HTTP"}'
   namespace: team-1
   labels:
@@ -45,8 +45,8 @@ metadata:
     pouet: "tut"
 spec:
 #  type: ClusterIP
-#  type: NodePort
-  type: LoadBalancer
+  type: NodePort
+#  type: LoadBalancer
   selector:
     app: my-test-app
   ports:
@@ -54,3 +54,22 @@ spec:
     protocol: TCP
     port: 80
     targetPort: http-server
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: my-ingress
+  annotations:
+    # If the class annotation is not specified it defaults to "gce".
+    kubernetes.io/ingress.class: "gce"
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /*
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: my-test-service
+            port:
+              number: 80
